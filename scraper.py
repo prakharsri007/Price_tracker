@@ -7,7 +7,7 @@ import time
 # Get the PORT environment variable or use a default port (e.g., 8000)
 PORT = int(os.environ.get("PORT", 8000))
 
-URL = 'https://www.amazon.in/Acer-Predator-Processor-Windows-PHN16-71/dp/B0BYN3FGHR/ref=pd_ci_mcx_mh_mcx_views_0?pd_rd_w=Gkd65&content-id=amzn1.sym.cd312cd6-6969-4220-8ac7-6dc7c0447352%3Aamzn1.symc.ca948091-a64d-450e-86d7-c161ca33337b&pf_rd_p=cd312cd6-6969-4220-8ac7-6dc7c0447352&pf_rd_r=1JA6RQN04BVCV9CQQ789&pd_rd_wg=fDXOS&pd_rd_r=9bb90039-2259-4aa3-b23e-720a5e7c9695&pd_rd_i=B0BYN3FGHR'
+URL = 'https://www.amazon.in/LG-Ultragear-Native-Monitor-Freesync/dp/B08J5YGC9V/ref=pd_ci_mcx_mh_mcx_views_0?pd_rd_w=BFMxy&content-id=amzn1.sym.cd312cd6-6969-4220-8ac7-6dc7c0447352%3Aamzn1.symc.ca948091-a64d-450e-86d7-c161ca33337b&pf_rd_p=cd312cd6-6969-4220-8ac7-6dc7c0447352&pf_rd_r=AG1YRNN81AN5R6RSK022&pd_rd_wg=7Nt8A&pd_rd_r=748e3919-ac6e-422b-8d06-dc75ac166cd3&pd_rd_i=B08J5YGC9V&th=1'
 
 headers = {
     "User-Agent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36'}
@@ -48,7 +48,7 @@ while True:
         server.login('007.praks007@gmail.com', 'csmx cyoi svdu bhwq')
 
         subject = 'Price Drop !!!!!!!'
-        body = 'Check the Link Now!!! https://www.amazon.in/Acer-Predator-Processor-Windows-PHN16-71/dp/B0BYN3FGHR/ref=pd_ci_mcx_mh_mcx_views_0?pd_rd_w=Gkd65&content-id=amzn1.sym.cd312cd6-6969-4220-8ac7-6dc7c0447352%3Aamzn1.symc.ca948091-a64d-450e-86d7-c161ca33337b&pf_rd_p=cd312cd6-6969-4220-8ac7-6dc7c0447352&pf_rd_r=1JA6RQN04BVCV9CQQ789&pd_rd_wg=fDXOS&pd_rd_r=9bb90039-2259-4aa3-b23e-720a5e7c9695&pd_rd_i=B0BYN3FGHR'
+        body = 'Check the Link Now!!! https://www.amazon.in/LG-Ultragear-Native-Monitor-Freesync/dp/B08J5YGC9V/ref=pd_ci_mcx_mh_mcx_views_0?pd_rd_w=BFMxy&content-id=amzn1.sym.cd312cd6-6969-4220-8ac7-6dc7c0447352%3Aamzn1.symc.ca948091-a64d-450e-86d7-c161ca33337b&pf_rd_p=cd312cd6-6969-4220-8ac7-6dc7c0447352&pf_rd_r=AG1YRNN81AN5R6RSK022&pd_rd_wg=7Nt8A&pd_rd_r=748e3919-ac6e-422b-8d06-dc75ac166cd3&pd_rd_i=B08J5YGC9V&th=1'
 
         msg = f"Subject: {subject}\n\n{body}"
 
