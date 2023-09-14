@@ -42,5 +42,5 @@ while True:
         print('EMAILS ALERTS SENT')
 
         server.quit()
-    time.sleep(60*60)   
+    time.sleep(24*60*60)   
     check_price()    
