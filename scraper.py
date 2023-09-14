@@ -14,18 +14,31 @@ headers = {
 
 while True:
     def check_price():
-        page = requests.get(URL, headers=headers)
-        soup = BeautifulSoup(page.content, 'html.parser')
-        title = soup.find(id="productTitle").get_text()
-        price = soup.find('span', {'class': 'a-price-whole'})
-        price_text = price.get_text().replace(',', '').replace('.', '')
-        price = int(price_text)
-        print(price)
-        print(title.strip())
+        try:
+            page = requests.get(URL, headers=headers)
+            soup = BeautifulSoup(page.content, 'html.parser')
+            title = soup.find(id="productTitle")
+            price = soup.find('span', {'class': 'a-price-whole'})
 
-        # this is the price check condition
-        if price > 12000:
-            send_mail()
+            if title is not None:
+                title_text = title.get_text().strip()
+                print(title_text)
+            else:
+                print("Product title not found.")
+
+            if price is not None:
+                price_text = price.get_text().replace(',', '').replace('.', '')
+                price = int(price_text)
+                print(price)
+            else:
+                print("Product price not found.")
+
+            # Check the price condition
+            if price is not None and price > 12000:
+                send_mail()
+        except Exception as e:
+            print("An error occurred:", str(e))
+
 
     def send_mail():
         server = smtplib.SMTP('smtp.gmail.com', 587)
