@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import smtplib
 import time
 
-URL= 'https://www.amazon.in/LG-Ultragear-Compatible-Monitor-Display/dp/B08J5YGC9V/?_encoding=UTF8&pd_rd_w=5cuok&content-id=amzn1.sym.e5c03be3-10ba-4bc8-b9be-6fcea12320ed%3Aamzn1.symc.adba8a53-36db-43df-a081-77d28e1b71e6&pf_rd_p=e5c03be3-10ba-4bc8-b9be-6fcea12320ed&pf_rd_r=KV326X8FFHJY42ZCA71Q&pd_rd_wg=DFgLM&pd_rd_r=feae59b1-38ae-4f57-8c66-2cebf863fb7e&ref_=pd_gw_ci_mcx_mr_hp_atf_m&th=1'
+URL= 'https://www.amazon.in/Acer-Predator-Processor-Windows-PHN16-71/dp/B0BYN3FGHR/ref=pd_ci_mcx_mh_mcx_views_0?pd_rd_w=Gkd65&content-id=amzn1.sym.cd312cd6-6969-4220-8ac7-6dc7c0447352%3Aamzn1.symc.ca948091-a64d-450e-86d7-c161ca33337b&pf_rd_p=cd312cd6-6969-4220-8ac7-6dc7c0447352&pf_rd_r=1JA6RQN04BVCV9CQQ789&pd_rd_wg=fDXOS&pd_rd_r=9bb90039-2259-4aa3-b23e-720a5e7c9695&pd_rd_i=B0BYN3FGHR'
 
 headers = {"User-Agent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36'}
 while True:
@@ -18,7 +18,7 @@ while True:
         print(title.strip())
 
         #this is the price check condition
-        if(price <= 12000):
+        if(price > 12000):
             send_mail()
     
 
@@ -30,7 +30,7 @@ while True:
         server.login('007.praks007@gmail.com' , 'csmx cyoi svdu bhwq')
 
         subject = 'Price Drop !!!!!!!'
-        body= 'Check the Link Now!!! https://www.amazon.in/LG-Ultragear-Compatible-Monitor-Display/dp/B08J5YGC9V/?_encoding=UTF8&pd_rd_w=5cuok&content-id=amzn1.sym.e5c03be3-10ba-4bc8-b9be-6fcea12320ed%3Aamzn1.symc.adba8a53-36db-43df-a081-77d28e1b71e6&pf_rd_p=e5c03be3-10ba-4bc8-b9be-6fcea12320ed&pf_rd_r=KV326X8FFHJY42ZCA71Q&pd_rd_wg=DFgLM&pd_rd_r=feae59b1-38ae-4f57-8c66-2cebf863fb7e&ref_=pd_gw_ci_mcx_mr_hp_atf_m&th=1'
+        body= 'Check the Link Now!!! https://www.amazon.in/Acer-Predator-Processor-Windows-PHN16-71/dp/B0BYN3FGHR/ref=pd_ci_mcx_mh_mcx_views_0?pd_rd_w=Gkd65&content-id=amzn1.sym.cd312cd6-6969-4220-8ac7-6dc7c0447352%3Aamzn1.symc.ca948091-a64d-450e-86d7-c161ca33337b&pf_rd_p=cd312cd6-6969-4220-8ac7-6dc7c0447352&pf_rd_r=1JA6RQN04BVCV9CQQ789&pd_rd_wg=fDXOS&pd_rd_r=9bb90039-2259-4aa3-b23e-720a5e7c9695&pd_rd_i=B0BYN3FGHR'
 
         msg = f"Subject: {subject}\n\n{body}"
 
@@ -42,5 +42,5 @@ while True:
         print('EMAILS ALERTS SENT')
 
         server.quit()
-    time.sleep(24*60*60)   
+    time.sleep(12*60*60)   
     check_price()    
