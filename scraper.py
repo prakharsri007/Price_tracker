@@ -39,7 +39,6 @@ while True:
         except Exception as e:
             print("An error occurred:", str(e))
 
-
     def send_mail():
         server = smtplib.SMTP('smtp.gmail.com', 587)
         server.ehlo()
@@ -62,7 +61,7 @@ while True:
         server.quit()
 
     check_price()
-    time.sleep(12 * 60 * 60)
+    time.sleep(2 * 60)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=PORT)  # Start the app with the specified PORT
