@@ -70,3 +70,6 @@ def check_price_endpoint():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=PORT)
+    while True:
+        check_price_endpoint()  # Call the function
+        time.sleep(120)  # Sleep for 2 minutes (120 seconds)
