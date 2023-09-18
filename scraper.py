@@ -48,7 +48,7 @@ def send_mail():
     server.ehlo()
     server.login('007.praks007@gmail.com', 'csmx cyoi svdu bhwq')
 
-    subject = 'Price Drop !!!!!!!'
+    subject = 'Price Drop Nahi Hua!!!!!!!'
     body = 'Check the Link Now!!! ' + URL
 
     msg = f"Subject: {subject}\n\n{body}"
@@ -64,11 +64,9 @@ def send_mail():
 
 @app.route('/check_price', methods=['GET'])
 def check_price_endpoint():
-    check_price()
-    return jsonify({"message": "Price check initiated"})
+    while(True):
+        check_price()
+        jsonify({"message": "Price check not initiated"})
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=PORT)
-    while True:
-        check_price()  # Call the function
-        time.sleep(120)  # Sleep for 2 minutes (120 seconds)
